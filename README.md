@@ -69,6 +69,8 @@ This is small mod that allows Spark 40 to play longer. Some amps after 3-4 hours
 ![cap1_small](https://github.com/user-attachments/assets/67d0eb2c-6cee-4157-9855-010f0407a53f)
 ![cap_mod_small](https://github.com/user-attachments/assets/0ca9b960-b6d9-46cf-a95e-8988a80623a2)
 
+## Bluetooth mod
+Basically replacing BT module and antennas with better ones. To be continued...
 
 ## Additional 50W audio out
 **Complexity:** very high
