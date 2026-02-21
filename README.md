@@ -55,7 +55,6 @@ With some soldering skills op-amp can be replaced with much better NE5532 or OPA
 
 Spark 40 uses TPA3116D2 (50W). We can almost double its power by replacing the amp to TPA3156D2 (70W). True soldering skills are needed. You do not need to change radiator, because using the same volume TPA3156D2 eats less power. At maximum volume they need the same power, but TPA3156D2 is almost twice as loud. Difference is most noticable, because you need to adjust volume potentiometer very carefully now.
 
-wymiana wzmacniacza TPA3116D2 (50W) na TPA3156D2 (70W)
 ![amp1_small](https://github.com/user-attachments/assets/22d1942c-cab6-453e-bbe3-c35ec7d85289)
 ![amp2_small](https://github.com/user-attachments/assets/eff870a7-577d-46d8-963e-5de3ea61f26e)
 ![amp3_small](https://github.com/user-attachments/assets/0c6446f5-40f6-4cf2-9efe-4e6d813974de)
