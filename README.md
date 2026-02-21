@@ -16,7 +16,9 @@ There are two motherboards seen in Spark 40:
 Both produce similar quality audio and both can be modded, but older board has better analog audio route and option to add additional 50W active output. I marked the area which need to me modded.
 
 # MODS
-There are several mods, which can improve its audio quality. I will grade them in terms of effect on audio.
+There are several mods, which can improve its audio quality. I recommend:
+- "Bass sock mod" for everyone because it costs nothing. 
+- "Op-amp replace" + "Full range speakers replace" which noticably improve Spark 40 audio quality and make it best sounding amp across all Positive grid ones.
 
 ## Bass sock mod
 **Complexity:** very low
@@ -43,8 +45,8 @@ Spark 40 uses 10cm / 4" speaders. They are medicore at most. I replaced them wit
 Spark 40 uses 3Peak TP2582 opamp in TSSOP8 package for guitar sound amplification. This is the weakest point in the amp since this IC is very faulty. If your Spark 40 stoped producing guitar sound or there are noises that you have not heard before, this probably means that TP2582 is dead already. There are not many TSSOP8 opamps on market which are drop-in replacements. The best one I have found is Texas Instruments TL072CPWR. It is reliable and because It costs 1$ on Aliexpress and I would say it is first mod that makes noticable difference. If you put two Spark 40, where one has TL072CPWR, you will notice the difference right away. After changing opamp and replacing speakers or full range ones, Spark 40 sounds way better than Spark 2.
 
 With some soldering skills op-amp can be replaced with much better NE5532 or OPA2134, but I have not seen them in TSSOP8 package. You need to have hot-air soldering station and some soldering sills to perform this
-
-
+![opamp_old_small](https://github.com/user-attachments/assets/f74ee7d3-a6ee-404a-ad0f-9f74cf2fe5dd)
+![opamp_new_small](https://github.com/user-attachments/assets/bd92485f-a652-427e-839f-77424176f794)
 
 ## 70W mod
 **Complexity:** very high
@@ -64,6 +66,9 @@ wymiana wzmacniacza TPA3116D2 (50W) na TPA3156D2 (70W)
 **Effect:** a bit better scene, Spark 40 can play 24/7 after this
 
 This is small mod that allows Spark 40 to play longer. Some amps after 3-4 hours can produce crackling sound or even no sound in speakers. The capacitor C114 (100uF, 35V) just near amp radiator is very weak and should be changed in this case. You do not need to change its capacity, just but better quality cap.
+![cap1_small](https://github.com/user-attachments/assets/67d0eb2c-6cee-4157-9855-010f0407a53f)
+![cap_mod_small](https://github.com/user-attachments/assets/0ca9b960-b6d9-46cf-a95e-8988a80623a2)
+
 
 ## Additional 50W audio out
 **Complexity:** very high
