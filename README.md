@@ -42,7 +42,7 @@ Spark 40 uses 10cm / 4" speaders. They are medicore at most. I replaced them wit
 
 **Effect:** all unnecesary noices are gone, no more white noise or cracking sounds, gain in guitar audio quality, no more bass-blanket on the guitar input
 
-Spark 40 uses 3Peak TP2582 opamp in TSSOP8 package for guitar sound amplification. This is the weakest point in the amp since this IC is very faulty. If your Spark 40 stoped producing guitar sound or there are noises that you have not heard before, this probably means that TP2582 is dead already. There are not many TSSOP8 opamps on market which are drop-in replacements. The best one I have found is Texas Instruments TL072CPWR. It is reliable and because It costs 1$ on Aliexpress and I would say it is first mod that makes noticable difference. If you put two Spark 40, where one has TL072CPWR, you will notice the difference right away. After changing opamp and replacing speakers with full range ones, Spark 40 sounds way better than Spark 2.
+Spark 40 uses 3Peak TP2582 opamp in TSSOP8 package for guitar sound amplification. This is the weakest point in the amp since this IC is very faulty. If your Spark 40 stoped producing guitar sound or there are noises that you have not heard before, this probably means that TP2582 is dead already. There are not many TSSOP8 opamps on market which are drop-in replacements. The best one I have found is Texas Instruments TL072CPWR. It is reliable and because it costs 1$ on Aliexpress and I would say it is first mod that makes noticable difference. If you put two Spark 40, where one has TL072CPWR, you will notice the difference right away. After changing opamp and replacing speakers with full range ones, Spark 40 sounds way better than Spark 2.
 
 With some soldering skills op-amp can be replaced with much better NE5532 or OPA2134, but I have not seen them in TSSOP8 package. You need to have hot-air soldering station and some soldering sills to perform this
 ![opamp_old_small](https://github.com/user-attachments/assets/f74ee7d3-a6ee-404a-ad0f-9f74cf2fe5dd)
@@ -53,7 +53,7 @@ With some soldering skills op-amp can be replaced with much better NE5532 or OPA
 
 **Effect:** MOAR POWAH!
 
-Spark 40 uses TPA3116D2 (50W). We can almost double its power by replacing the amp to TPA3156D2 (70W). True soldering skills are needed. You do not need to change radiator, because using the same volume TPA3156D2 eats less power. At maximum volume they need the same power, but TPA3156D2 is almost twice as loud. Difference is most noticable, because you need to adjust volume potentiometer very carefully now.
+Spark 40 uses TPA3116D2 (50W). We can almost double its power by replacing the amp with TPA3156D2 (70W). True soldering skills are needed. You do not need to change radiator, because using the same volume TPA3156D2 eats less power. At maximum volume they need the same power, but TPA3156D2 is almost twice as loud. Difference is most noticable, because you need to adjust volume potentiometer very carefully now.
 
 ![amp1_small](https://github.com/user-attachments/assets/22d1942c-cab6-453e-bbe3-c35ec7d85289)
 ![amp2_small](https://github.com/user-attachments/assets/eff870a7-577d-46d8-963e-5de3ea61f26e)
@@ -67,6 +67,16 @@ Spark 40 uses TPA3116D2 (50W). We can almost double its power by replacing the a
 This is small mod that allows Spark 40 to play longer. Some amps after 3-4 hours can produce crackling sound or even no sound in speakers. The capacitor C114 (100uF, 35V) just near amp radiator is very weak and should be changed in this case. You do not need to change its capacity, just but better quality cap.
 ![cap1_small](https://github.com/user-attachments/assets/67d0eb2c-6cee-4157-9855-010f0407a53f)
 ![cap_mod_small](https://github.com/user-attachments/assets/0ca9b960-b6d9-46cf-a95e-8988a80623a2)
+
+## Gain abuse mod - FAULTZ disable
+**Complevity:** medium
+
+**Effect:** allows TPA3116D2 or TPA3156D2 amp to work better with very overdriven signals or high gain pickups.
+
+Amp has a pin called FAULTZ. Generally it is used for fault reporting including Over-temp, DC Detect or Open drain. Temperature is not a problem since small heatsink does good job keeping temperature under 70 degree. FAULTZ signal triggers sometimes on haigh gain pickups and causes Spark MCU to shut down sound processing for split-second. The more it triggers, the longer MCU sound shutdowns will be. The more gain abuse you do, the more frequent this will appear. One never Spark models you can basically enable/disable this function in app (Hi-Z Mode), that does the same thing, but in Spark 40 this need done manually with soldering.
+On the older Spark 40 board, to disable FAULTZ signal (T67 pin), you just need to connect ponits T67-T68.
+![faultz](https://github.com/user-attachments/assets/90a3946b-b8d9-4e58-899d-71832a0fc660)
+On never model of PCB points T67 and T68 are in the distance. T68 is near MCU and T67 is under ampo radiator. The easier method is just to connect ground pin 3 on TPA3116D2 or TPA3156D2.
 
 ## Bluetooth mod
 Basically replacing BT module and antennas with better ones. To be continued...
