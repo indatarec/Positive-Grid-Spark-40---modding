@@ -76,7 +76,7 @@ This is small mod that allows Spark 40 to play longer. Some amps after 3-4 hours
 Amp has a pin called FAULTZ. Generally it is used for fault reporting including Over-temp, DC Detect or Open drain. Temperature is not a problem since small heatsink does good job keeping temperature under 70 degree. FAULTZ signal triggers sometimes on haigh gain pickups and causes Spark MCU to shut down sound processing for split-second. The more it triggers, the longer MCU sound shutdowns will be. The more gain abuse you do, the more frequent this will appear. One never Spark models you can basically enable/disable this function in app (Hi-Z Mode), that does the same thing, but in Spark 40 this need done manually with soldering.
 On the older Spark 40 board, to disable FAULTZ signal (T67 pin), you just need to connect points T67-T68.
 ![faultz](https://github.com/user-attachments/assets/90a3946b-b8d9-4e58-899d-71832a0fc660)
-On never model of PCB points T67 and T68 are in the distance. T68 is near MCU and T67 is under TPA3116D2 radiator. The easier method is just to connect ground pin 3 on TPA3116D2.
+On never model of PCB points T67 and T68 are in the distance. T68 is near MCU and T67 is under TPA3116D2 radiator. The easier method is just to connect pin 3 on TPA3116D2 to ground.
 
 ## Bluetooth mod
 Basically replacing BT module and antennas with better ones. To be continued...
