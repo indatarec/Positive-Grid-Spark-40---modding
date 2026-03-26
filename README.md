@@ -44,6 +44,7 @@ Spark 40 uses 10cm / 4" speaders. They are medicore at most. I replaced them wit
 
 Spark 40 uses 3Peak TP2582 opamp in TSSOP8 package for guitar sound amplification. This is the weakest point in the amp since this IC is very faulty. If your Spark 40 stoped producing guitar sound or there are noises that you have not heard before, this probably means that TP2582 is dead already. There are not many TSSOP8 opamps on market which are drop-in replacements. The best one I have found is Texas Instruments TL072CPWR. It is reliable and because it costs 1$ on Aliexpress and I would say it is first mod that makes noticable difference. If you put two Spark 40, where one has TL072CPWR, you will notice the difference right away. 
 TL072CPWRhas very low parameter called "higher input Z/lower noise". Why this is important gor guitar: https://samsontech.com/blog/whats-a-hi-z-input-and-why-does-it-matter/
+
 After changing opamp and replacing speakers with full range ones, Spark 40 sounds way better than Spark 2.
 
 With some soldering skills op-amp can be replaced with much better NE5532 or OPA2134, but I have not seen them in TSSOP8 package. You need to have hot-air soldering station and some soldering sills to perform this
