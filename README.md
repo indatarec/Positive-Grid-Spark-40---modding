@@ -58,6 +58,8 @@ With some soldering skills op-amp can be replaced with much better NE5532 or OPA
 
 Spark 40 uses TPA3116D2 (50W). We can almost double its power by replacing the amp with TPA3156D2 (70W). True soldering skills are needed. You do not need to change radiator, because using the same volume TPA3156D2 eats less power. At maximum volume they need the same power, but TPA3156D2 is almost twice as loud. Difference is most noticable, because you need to adjust volume potentiometer very carefully now.
 
+After changing amp, I recommend to perform "gain abuse mod" described below, since TPA3156D2 sends FAULTZ signal more frequently than TPA3116D2.
+
 ![amp1_small](https://github.com/user-attachments/assets/22d1942c-cab6-453e-bbe3-c35ec7d85289)
 ![amp2_small](https://github.com/user-attachments/assets/eff870a7-577d-46d8-963e-5de3ea61f26e)
 ![amp3_small](https://github.com/user-attachments/assets/0c6446f5-40f6-4cf2-9efe-4e6d813974de)
@@ -80,6 +82,8 @@ Amp has a pin called FAULTZ. Generally it is used for fault reporting including 
 On the older Spark 40 board, to disable FAULTZ signal (T67 pin), you just need to connect points T67-T68.
 ![faultz](https://github.com/user-attachments/assets/90a3946b-b8d9-4e58-899d-71832a0fc660)
 On never model of PCB points T67 and T68 are in the distance. T68 is near MCU and T67 is under TPA3116D2 radiator. The easier method is just to connect pin 3 on TPA3116D2 to ground.
+
+This mod is neccesary for Spark 40 to work normally after doing 70W mod.
 
 ## Bluetooth mod
 Basically replacing BT module and antennas with better ones. To be continued...
