@@ -126,15 +126,15 @@ In my opinion, this is a must-have modification if you use heavily overvolted ac
 
 The Spark 40 uses the `TPA3116D2` amplifier chip (50W).
 
-By replacing it with the `TPA3256D2`, the amp output can be increased to around 70W.
+By replacing it with the `TPA3156D2`, the amp output can be increased to around 70W.
 
 This modification requires advanced soldering skills.
 
-You do not need to upgrade the heatsink because the TPA3256D2 is more power-efficient at lower volumes. At maximum output both chips consume similar power, but the TPA3256D2 delivers noticeably higher volume.
+You do not need to upgrade the heatsink because the TPA3156D2 is more power-efficient at lower volumes. At maximum output both chips consume similar power, but the TPA3156D2 delivers noticeably higher volume.
 
 The difference becomes immediately obvious because the volume potentiometer becomes far more sensitive.
 
-After replacing the amplifier chip, I strongly recommend performing the **Gain Abuse Mod** described below, because the TPA3256D2 triggers the `FAULTZ` signal more frequently than the original amplifier.
+After replacing the amplifier chip, I strongly recommend performing the **Gain Abuse Mod** described below, because the TPA3156D2 triggers the `FAULTZ` signal more frequently than the original amplifier.
 
 ![amp1_small](https://github.com/user-attachments/assets/22d1942c-cab6-453e-bbe3-c35ec7d85289)
 ![amp2_small](https://github.com/user-attachments/assets/eff870a7-577d-46d8-963e-5de3ea61f26e)
