@@ -51,6 +51,9 @@ With some soldering skills op-amp can be replaced with much better NE5532 or OPA
 ![opamp_old_small](https://github.com/user-attachments/assets/f74ee7d3-a6ee-404a-ad0f-9f74cf2fe5dd)
 ![opamp_new_small](https://github.com/user-attachments/assets/bd92485f-a652-427e-839f-77424176f794)
 
+Very rarely 18/24V modded active pickups in guitar can blow guitar opamp inside Spark 40. TL072 can candle twice as high input offset voltage. This in my oppinion is "must-have" mod for this amp if you want to use highly overvolted pickups like EMG 18-24V mod.
+<img width="775" height="804" alt="ti opmap" src="https://github.com/user-attachments/assets/9593739c-f43b-45a8-a47a-aa561ca399d2" />
+
 ## 70W mod
 **Complexity:** very high
 
