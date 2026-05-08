@@ -1,99 +1,229 @@
-# Positive Grid Spark 40 - modding tutorial
+# Positive Grid Spark 40 - Modding Tutorial
 
-Spark 40 is 40-Watt Smart Guitar Amp & Bluetooth® Speaker from Positive Grid.
-It has huge potential for improvement. In terms of audio quality and raw powercan easily bypass Spark 2 and other brand models.
-There is an excellent hardware analysis of this amp on hackday.io:
+The Spark 40 is a 40-Watt Smart Guitar Amp & Bluetooth® speaker made by Positive Grid.
+
+It has huge potential for improvement. In terms of audio quality and raw power, it can easily outperform the Spark 2 and many competing models.
+
+There is already an excellent hardware teardown and analysis of the amp available on Hackaday:
+
 https://hackaday.io/project/174163-positive-grid-spark-40-teardownmods
 
-This is an addition and my own findings to the one above.
+This guide is an addition to that article and contains my own findings and modifications.
 
-There are two motherboards seen in Spark 40:
-- (old) Jamup 2019.11.22 PN: ECB00511 / Spark 40 with serial numbers up to S040C6xxxxxx
-- (new) Jamup v1.2 20.12.18 PN: ECB00888 / Spark 40 with serial numbers from S040C9xxxxxx
+There are two main motherboard revisions found in the Spark 40:
+
+- **(Old)** `Jamup 2019.11.22 PN: ECB00511`  
+  Found in Spark 40 units with serial numbers up to `S040C6xxxxxx`
+
+- **(New)** `Jamup v1.2 20.12.18 PN: ECB00888`  
+  Found in Spark 40 units with serial numbers starting from `S040C9xxxxxx`
 
 ![porownanie](https://github.com/user-attachments/assets/95ed6be3-975b-465d-809c-fa2ed36fcda1)
 
-Both produce similar quality audio and both can be modded, but older board has better analog audio route and option to add additional 50W active output. I marked the area which need to me modded.
+Both revisions produce similar audio quality and both can be modified, but the older board has a better analogue audio path and also supports adding an additional 50W output stage.
 
-# MODS
-There are several mods, which can improve its audio quality. I recommend:
-- "Bass sock mod" for everyone because it costs nothing. 
-- "Op-amp replace" + "Full range speakers replace" which noticably improve Spark 40 audio quality and make it best sounding amp across all Positive grid ones.
+I marked the areas that require modification.
 
-## Bass sock mod
-**Complexity:** very low
+---
 
-**Effect:** less bass, very noticable
+# Mods
 
-Grill is mounted on velcro tape. Just take the grill and put something in the bass reflex hole. Effect - less bass.
+There are several modifications that can significantly improve the Spark 40.
+
+Recommended mods:
+
+- **Bass Sock Mod** — recommended for everyone because it costs nothing.
+- **Op-Amp Replacement + Full-Range Speaker Replacement** — these noticeably improve the Spark 40 audio quality and make it, in my opinion, the best-sounding Positive Grid amp.
+
+---
+
+## Bass Sock Mod
+
+**Complexity:** Very low
+
+**Effect:** Reduced bass response, highly noticeable
+
+The front grill is mounted using Velcro tape. Simply remove the grill and place a piece of cloth, foam, or a sock into the bass reflex port.
+
+Result: less excessive bass and a tighter sound.
+
 ![bass_mod](https://github.com/user-attachments/assets/1436d659-974c-4d49-9303-d2c6e0333756)
 
-## Full range speakers replace 
-**Complexity:** low
+---
 
-**Effect:** better clear tones, especially in higher frequency. Change in dynamic of audio.
+## Full-Range Speaker Replacement
 
-Spark 40 uses 10cm / 4" speaders. They are medicore at most. I replaced them with JBL Stage 1 42F or JBL Stage 2 45F. Both produce much crispier sound and with op-amp mod totally change audio perception from Spark 40 amp. Mod is easy to perform, because speakers are not soldered and there are quick connectors to them.
+**Complexity:** Low
+
+**Effect:** Clearer tones, especially in higher frequencies, with improved audio dynamics
+
+The Spark 40 uses 10 cm / 4" speakers. In my opinion, the stock speakers are mediocre at best.
+
+I replaced them with:
+
+- JBL Stage 1 42F
+- JBL Stage 2 45F
+
+Both produce a much clearer and crisper sound. Combined with the op-amp mod, they completely change the overall audio character of the Spark 40.
+
+This modification is easy to perform because the speakers use quick connectors and are not soldered directly to the board.
+
 ![speakers_mod_small](https://github.com/user-attachments/assets/a86b9bbf-1ec5-4e8a-a180-3db1e3f67a32)
 
+---
 
-## Op-amp replace (MUST HAVE MOD!)
-**Complexity:** high
+## Op-Amp Replacement (MUST-HAVE MOD)
 
-**Effect:** all unnecesary noices are gone, no more white noise or cracking sounds, gain in guitar audio quality, no more bass-blanket on the guitar input
+**Complexity:** High
 
-Spark 40 uses 3Peak TP2582 opamp in TSSOP8 package for guitar sound amplification. This is the weakest point in the amp since this IC is very faulty. If your Spark 40 stoped producing guitar sound or there are noises that you have not heard before, this probably means that TP2582 is dead already. There are not many TSSOP8 opamps on market which are drop-in replacements. The best one I have found is Texas Instruments TL072CPWR. It is reliable and because it costs 1$ on Aliexpress and I would say it is first mod that makes noticable difference. If you put two Spark 40, where one has TL072CPWR, you will notice the difference right away. 
-TL072CPWRhas very low parameter called "higher input Z/lower noise". Why this is important gor guitar: https://samsontech.com/blog/whats-a-hi-z-input-and-why-does-it-matter/
+**Effect:** Eliminates unnecessary noise, removes white noise and crackling, improves guitar audio quality, and removes the "bass blanket" effect on guitar input
 
-After changing opamp and replacing speakers with full range ones, Spark 40 sounds way better than Spark 2.
+The Spark 40 uses a 3Peak TP2582 op-amp in a TSSOP-8 package for guitar signal amplification.
 
-With some soldering skills op-amp can be replaced with much better NE5532 or OPA2134, but I have not seen them in TSSOP8 package. You need to have hot-air soldering station and some soldering sills to perform this
+This is one of the weakest points of the amp because the IC is prone to failure.
+
+If your Spark 40 suddenly stops producing guitar sound or starts generating strange noises that were not present before, the TP2582 is likely damaged.
+
+There are not many drop-in TSSOP-8 replacement op-amps available. The best replacement I found is the Texas Instruments `TL072CPWR`.
+
+It is reliable, inexpensive (around $1 on AliExpress), and provides a very noticeable improvement in sound quality.
+
+If you compare two Spark 40 amps side by side — one stock and one modified with the TL072CPWR — the difference is immediately noticeable.
+
+The TL072CPWR also performs better thanks to its lower noise and higher input impedance characteristics, which are especially important for guitar signals:
+
+https://samsontech.com/blog/whats-a-hi-z-input-and-why-does-it-matter/
+
+After replacing both the op-amp and the speakers, the Spark 40 sounds significantly better than the Spark 2.
+
+With advanced soldering skills, the op-amp can also be replaced with even better chips such as:
+
+- NE5532
+- OPA2134
+
+However, these are not commonly available in TSSOP-8 format, so adapters or additional work may be required.
+
+This mod requires a hot-air soldering station and solid soldering skills.
+
 ![opamp_old_small](https://github.com/user-attachments/assets/f74ee7d3-a6ee-404a-ad0f-9f74cf2fe5dd)
 ![opamp_new_small](https://github.com/user-attachments/assets/bd92485f-a652-427e-839f-77424176f794)
 
-Very rarely 18/24V modded active pickups in guitar can blow guitar opamp inside Spark 40. TL072 can candle twice as high input offset voltage. This in my oppinion is "must-have" mod for this amp if you want to use highly overvolted pickups like EMG 18-24V mod.
+Very high-voltage active pickups (such as EMG 18V/24V mods) can sometimes damage the original guitar op-amp inside the Spark 40.
+
+The TL072 can tolerate much higher input offset voltages, making it far more reliable in those scenarios.
+
+In my opinion, this is a must-have modification if you use heavily overvolted active pickups.
+
 <img width="775" height="804" alt="ti opmap" src="https://github.com/user-attachments/assets/9593739c-f43b-45a8-a47a-aa561ca399d2" />
 
-## 70W mod
-**Complexity:** very high
+---
 
-**Effect:** MOAR POWAH!
+## 70W Mod
 
-Spark 40 uses TPA3116D2 (50W). We can almost double its power by replacing the amp with TPA3156D2 (70W). True soldering skills are needed. You do not need to change radiator, because using the same volume TPA3156D2 eats less power. At maximum volume they need the same power, but TPA3156D2 is almost twice as loud. Difference is most noticable, because you need to adjust volume potentiometer very carefully now.
+**Complexity:** Very high
 
-After changing amp, I recommend to perform "gain abuse mod" described below, since TPA3156D2 sends FAULTZ signal more frequently than TPA3116D2.
+**Effect:** More power and significantly higher output volume
+
+The Spark 40 uses the `TPA3116D2` amplifier chip (50W).
+
+By replacing it with the `TPA3256D2`, the amp output can be increased to around 70W.
+
+This modification requires advanced soldering skills.
+
+You do not need to upgrade the heatsink because the TPA3256D2 is more power-efficient at lower volumes. At maximum output both chips consume similar power, but the TPA3256D2 delivers noticeably higher volume.
+
+The difference becomes immediately obvious because the volume potentiometer becomes far more sensitive.
+
+After replacing the amplifier chip, I strongly recommend performing the **Gain Abuse Mod** described below, because the TPA3256D2 triggers the `FAULTZ` signal more frequently than the original amplifier.
 
 ![amp1_small](https://github.com/user-attachments/assets/22d1942c-cab6-453e-bbe3-c35ec7d85289)
 ![amp2_small](https://github.com/user-attachments/assets/eff870a7-577d-46d8-963e-5de3ea61f26e)
 ![amp3_small](https://github.com/user-attachments/assets/0c6446f5-40f6-4cf2-9efe-4e6d813974de)
 
-## Capacitor mod
-**Complevity:** medium
+---
 
-**Effect:** a bit better scene, Spark 40 can play 24/7 after this
+## Capacitor Mod
 
-This is small mod that allows Spark 40 to play longer. Some amps after 3-4 hours can produce crackling sound or even no sound in speakers. The capacitor C114 (100uF, 35V) just near amp radiator is very weak and should be changed in this case. You do not need to change its capacity, just but better quality cap.
+**Complexity:** Medium
+
+**Effect:** Improved stability and long-term reliability
+
+This small modification improves long-duration stability.
+
+Some Spark 40 units begin producing crackling sounds — or lose audio entirely — after running continuously for several hours.
+
+The capacitor `C114` (`100uF 35V`) located near the amplifier heatsink is often the cause.
+
+You do not need to increase its capacitance. Simply replacing it with a higher-quality capacitor is enough.
+
+After this modification, the Spark 40 can run continuously without issues.
+
 ![cap1_small](https://github.com/user-attachments/assets/67d0eb2c-6cee-4157-9855-010f0407a53f)
 ![cap_mod_small](https://github.com/user-attachments/assets/0ca9b960-b6d9-46cf-a95e-8988a80623a2)
 
-## Gain abuse mod - FAULTZ disable
-**Complevity:** medium
+---
 
-**Effect:** allows TPA3116D2 or TPA3156D2 amp to work better with very overdriven signals or high gain pickups.
+## Gain Abuse Mod — FAULTZ Disable
 
-Amp has a pin called FAULTZ. Generally it is used for fault reporting including Over-temp, DC Detect or Open drain. Temperature is not a problem since small heatsink does good job keeping temperature under 70 degree. FAULTZ signal triggers sometimes on haigh gain pickups and causes Spark MCU to shut down sound processing for split-second. The more it triggers, the longer MCU sound shutdowns will be. The more gain abuse you do, the more frequent this will appear. One never Spark models you can basically enable/disable this function in app (Hi-Z Mode), that does the same thing, but in Spark 40 this need done manually with soldering.
-On the older Spark 40 board, to disable FAULTZ signal (T67 pin), you just need to connect points T67-T68.
+**Complexity:** Medium
+
+**Effect:** Allows the amplifier to handle extremely high-gain signals and overdriven pickups more reliably
+
+The amplifier chip includes a pin called `FAULTZ`.
+
+Normally this pin is used for reporting faults such as:
+
+- Over-temperature
+- DC detection
+- Open drain conditions
+
+Temperature itself is usually not a problem because the heatsink keeps the amplifier below approximately 70°C.
+
+However, the `FAULTZ` signal can sometimes trigger when using very high-gain pickups or heavily overdriven signals. When this happens, the Spark MCU briefly shuts down audio processing, causing short audio dropouts.
+
+The harder the signal clips, the more frequently these shutdowns occur.
+
+Newer Spark models allow this protection behavior to be adjusted through the app using "Hi-Z Mode", but on the Spark 40 this modification must be done manually.
+
+### Older Spark 40 PCB
+
+To disable the `FAULTZ` signal on the older PCB revision, simply bridge points `T67` and `T68`.
+
 ![faultz](https://github.com/user-attachments/assets/90a3946b-b8d9-4e58-899d-71832a0fc660)
-On never model of PCB points T67 and T68 are in the distance. T68 is near MCU and T67 is under TPA3116D2 radiator. The easier method is just to connect pin 3 on TPA3116D2 to ground.
 
-This mod is neccesary for Spark 40 to work normally after doing 70W mod.
+### Newer Spark 40 PCB
 
-## Bluetooth mod
-Basically replacing BT module and antennas with better ones. To be continued...
+On the newer PCB revision, `T67` and `T68` are located far apart.
 
-## Additional 50W audio out
-**Complexity:** very high
+- `T68` is near the MCU
+- `T67` is located under the TPA3116D2 heatsink
 
-**Effect:** 50W internal speakers + 50W external passive speaker. Spark 40 was designed to be 100W (or even 120W) amp and you can unleash its full power.
+The easier solution is to connect pin 3 of the TPA3116D2 directly to ground.
 
-Mod possible only in old PCB Jamup 2019.11.22 PN: ECB00511 / Spark 40 with serial numbers up to S040C6xxxxxx. To be continued...
+This modification is practically required for stable operation after performing the 70W mod.
+
+---
+
+## Bluetooth Mod
+
+This involves replacing the Bluetooth module and antennas with higher-quality alternatives.
+
+To be continued...
+
+---
+
+## Additional 50W Audio Output
+
+**Complexity:** Very high
+
+**Effect:** 50W internal speakers + 50W external passive speaker output
+
+The Spark 40 was originally designed as a 100W (or even 120W) platform, and this mod unlocks much more of its original potential.
+
+This modification is only possible on the older motherboard revision:
+
+`Jamup 2019.11.22 PN: ECB00511`
+
+Found in Spark 40 units with serial numbers up to `S040C6xxxxxx`.
+
+To be continued...
